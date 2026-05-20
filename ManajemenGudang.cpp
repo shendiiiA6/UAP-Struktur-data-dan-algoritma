@@ -4,14 +4,16 @@ using namespace std;
 
 struct Barang{
     int id;
-    string nama;       //struct
+    string nama;       //materi struct
     int stok;
 };
 
 struct Node{
-    Barang data;    //pointer
+    Barang data;    //materi pointer
     Node* next;
 };
+
+
 
 
 int main(){
