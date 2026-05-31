@@ -68,6 +68,80 @@ public:
     }
 };
 
+class Queue {
+private:
+    Node* front;
+    Node* rear;
+
+public:
+    Queue() {
+        front = rear = NULL;
+    }
+
+    bool isEmpty() {
+        return front == NULL;
+    }
+
+ 
+    void enqueue(Barang barang) {
+
+        Node* baru = new Node;
+        baru->data = barang;
+        baru->next = NULL;
+
+        if (isEmpty()) {
+            front = rear = baru;
+        } else {
+            rear->next = baru;
+            rear = baru;
+        }
+
+        cout << "\nBarang berhasil ditambahkan !\n";
+    }
+
+    void dequeue(Stack &riwayat) {
+
+        if (isEmpty()) {
+            cout << "\nGudang kosong!\n";
+            return;
+        }
+
+        Node* hapus = front;
+
+        riwayat.push(hapus->data);
+
+        front = front->next;
+
+        if (front == NULL) {
+            rear = NULL;
+        }
+
+        cout << "\nBarang keluar dari gudang!\n";
+
+        delete hapus;
+    }
+
+    void tampil() {
+
+        if (isEmpty()) {
+            cout << "\nGudang kosong!\n";
+            return;
+        }
+
+        Node* bantu = front;
+
+        cout << "\n============== DATA GUDANG ==============\n";
+
+        while (bantu != NULL) {
+
+            cout << "ID Barang : " << bantu->data.id << endl;
+            cout << "Nama      : " << bantu->data.nama << endl;
+            cout << "Stok      : " << bantu->data.stok << endl;
+            cout << "-----------------------------------------\n";
+
+            bantu = bantu->next;
+        }
+    }
 
 int main(){
     
