@@ -82,7 +82,6 @@ public:
         return front == NULL;
     }
 
- 
     void enqueue(Barang barang) {
 
         Node* baru = new Node;
@@ -102,7 +101,7 @@ public:
     void dequeue(Stack &riwayat) {
 
         if (isEmpty()) {
-            cout << "\nGudang kosong!\n";
+            cout << "\nGudang kosong !\n";
             return;
         }
 
@@ -116,7 +115,7 @@ public:
             rear = NULL;
         }
 
-        cout << "\nBarang keluar dari gudang!\n";
+        cout << "\nBarang keluar dari gudang !\n";
 
         delete hapus;
     }
@@ -144,7 +143,6 @@ public:
     }
 
 int main(){
-    
->>>>>>> 04462b212cb3f61cca0f23052d600952ca7abaff
+
     return 0;
 }
