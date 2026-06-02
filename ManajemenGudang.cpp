@@ -4,7 +4,7 @@ using namespace std;
 
 struct Barang{
     int id;
-    string nama;       
+    string nama;           
     int stok;
 };
 
@@ -114,7 +114,6 @@ public:
         if (front == NULL) {
             rear = NULL;
         }
-
         cout << "\nBarang keluar dari gudang !" << endl;
 
         delete hapus;
@@ -210,6 +209,6 @@ public:
 };
 
 int main(){
-    
+
     return 0;
 }
