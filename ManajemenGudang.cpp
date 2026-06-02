@@ -35,33 +35,33 @@ public:
 
     void pop() {
         if (isEmpty()) {
-            cout << "\nRiwayat kosong !\n";
+            cout << "\nRiwayat kosong !" << endl;
             return;
         }
 
         Node* hapus = top;
         top = top->next;
 
-        cout << "\nRiwayat terakhir berhasil dihapus.\n";
+        cout << "\nRiwayat terakhir berhasil dihapus." << endl;
 
         delete hapus;
     }
 
     void tampil() {
         if (isEmpty()) {
-            cout << "\nRiwayat kosong !\n";
+            cout << "\nRiwayat kosong !" << endl;
             return;
         }
 
         Node* bantu = top;
 
-        cout << "\n========== RIWAYAT TRANSAKSI ==========\n";
+        cout << "\n========== RIWAYAT TRANSAKSI ==========" << endl;
 
         while (bantu != NULL) {
             cout << "ID Barang : " << bantu->data.id << endl;
             cout << "Nama      : " << bantu->data.nama << endl;
             cout << "Stok      : " << bantu->data.stok << endl;
-            cout << "---------------------------------------\n";
+            cout << "---------------------------------------" << endl;
 
             bantu = bantu->next;
         }
@@ -82,7 +82,6 @@ public:
         return front == NULL;
     }
 
- 
     void enqueue(Barang barang) {
 
         Node* baru = new Node;
@@ -96,13 +95,13 @@ public:
             rear = baru;
         }
 
-        cout << "\nBarang berhasil ditambahkan !\n";
+        cout << "\nBarang berhasil ditambahkan !" << endl;
     }
 
     void dequeue(Stack &riwayat) {
 
         if (isEmpty()) {
-            cout << "\nGudang kosong!\n";
+            cout << "\nGudang kosong !" << endl;
             return;
         }
 
@@ -116,7 +115,7 @@ public:
             rear = NULL;
         }
 
-        cout << "\nBarang keluar dari gudang!\n";
+        cout << "\nBarang keluar dari gudang !" << endl;
 
         delete hapus;
     }
@@ -130,18 +129,19 @@ public:
 
         Node* bantu = front;
 
-        cout << "\n============== DATA GUDANG ==============\n";
+        cout << "\n============== DATA GUDANG ==============" << endl;
 
         while (bantu != NULL) {
 
             cout << "ID Barang : " << bantu->data.id << endl;
             cout << "Nama      : " << bantu->data.nama << endl;
             cout << "Stok      : " << bantu->data.stok << endl;
-            cout << "-----------------------------------------\n";
+            cout << "-----------------------------------------" << endl;
 
             bantu = bantu->next;
         }
     }
+};
 
 int main(){
     
