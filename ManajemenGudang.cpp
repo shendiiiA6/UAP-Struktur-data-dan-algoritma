@@ -141,6 +141,72 @@ public:
             bantu = bantu->next;
         }
     }
+
+     void sortStokAscending() {
+
+        if (front == NULL) {
+            cout << "\nData kosong!\n";
+            return;
+        }
+
+        bool tukar;
+        Node* ptr;
+
+        do {
+            tukar = false;
+            ptr = front;
+
+            while (ptr->next != NULL) {
+
+                if (ptr->data.stok > ptr->next->data.stok) {
+
+                    Barang temp = ptr->data;
+                    ptr->data = ptr->next->data;
+                    ptr->next->data = temp;
+
+                    tukar = true;
+                }
+
+                ptr = ptr->next;
+            }
+
+        } while (tukar);
+
+        cout << "\nData berhasil diurutkan berdasarkan stok (Ascending).\n";
+    }
+
+     void sortNamaAscending() {
+
+        if (front == NULL) {
+            cout << "\nData kosong!\n";
+            return;
+        }
+
+        bool tukar;
+        Node* ptr;
+
+        do {
+            tukar = false;
+            ptr = front;
+
+            while (ptr->next != NULL) {
+
+                if (ptr->data.nama > ptr->next->data.nama) {
+
+                    Barang temp = ptr->data;
+                    ptr->data = ptr->next->data;
+                    ptr->next->data = temp;
+
+                    tukar = true;
+                }
+
+                ptr = ptr->next;
+            }
+
+        } while (tukar);
+
+        cout << "\nData berhasil diurutkan berdasarkan nama (A-Z).\n";
+    }
 };
 
 int main(){
