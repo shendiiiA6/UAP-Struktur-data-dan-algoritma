@@ -145,7 +145,7 @@ public:
      void sortStokAscending() {
 
         if (front == NULL) {
-            cout << "\nData kosong!\n";
+            cout << "\nData kosong !" << endl;
             return;
         }
 
@@ -172,13 +172,13 @@ public:
 
         } while (tukar);
 
-        cout << "\nData berhasil diurutkan berdasarkan stok (Ascending).\n";
+        cout << "\nData berhasil diurutkan berdasarkan stok (Ascending)." << endl;
     }
 
      void sortNamaAscending() {
 
         if (front == NULL) {
-            cout << "\nData kosong!\n";
+            cout << "\nData kosong !" << endl;
             return;
         }
 
@@ -205,7 +205,7 @@ public:
 
         } while (tukar);
 
-        cout << "\nData berhasil diurutkan berdasarkan nama (A-Z).\n";
+        cout << "\nData berhasil diurutkan berdasarkan nama (A-Z)." << endl;
     }
 };
 
