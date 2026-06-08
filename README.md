@@ -4,7 +4,7 @@
 
 1. Shendi Adha Fillian (2507071018)
 2. Aulia Zahra Anindia (2507071012)
-3. Muhammad Revhan Mahardicha(2550707003)
+3. Muhammad Revhan Mahardicha (2550707003)
 4. Ramadhan Nugraha Putra (2507071015)
 
 ## Deskripsi
