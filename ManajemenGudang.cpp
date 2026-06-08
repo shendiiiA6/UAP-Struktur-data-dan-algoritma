@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <limits>
 using namespace std;
 
 struct Barang{
@@ -230,6 +231,15 @@ int main(){
         cout << "=====================================" << endl;
         cout << "Pilih Menu : ";
         cin >> pilihan;
+
+        if (cin.fail()) {
+             cin.clear();
+             cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+             cout << "\nInput harus berupa angka !" << endl;
+             pilihan = 0;
+              continue;
+          }
 
         switch (pilihan) {
 
